@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		 <link rel="stylesheet" href="c/w3.css"> 
+	</head>
+	<body>
+		<div class="w3-container">
+			<div class="w3-container w3-teal">
+				<h2>看看你</h2>
+			</div>
+			<form class="w3-container w3-card-4">
+				<br>
+				<p>
+				<label class="w3-text-grey">明文</label>
+				<input id="plain" class="w3-input w3-border" required="" type="text" value="">
+				</p>
+				<p>
+				<label class="w3-text-grey">密文</label>
+				<input id="cipher" class="w3-input w3-border" required="" type="text">
+				</p>
+				<p>
+				<label class="w3-text-grey">随机数</label>
+				<input id="nonce" class="w3-input w3-border" required="" type="text">
+				</p>
+				<p>
+				<label class="w3-text-grey">密钥</label>
+				<input id="secret" class="w3-input w3-border" required="" type="text">
+				</p>
+				<p>
+				 <input class="w3-radio" type="radio" name="type" checked="checked">
+				 <label>只给你看</label>
+				 <input class="w3-radio" type="radio" name="type">
+				 <label>保留十分钟</label>
+				</p>
+				<button id="sendmsg" type="button" class="w3-btn w3-blue">获取链接</button>
+				<p>
+			</form>
+			<br>
+			<form class="w3-container w3-card-4">
+				<label class="w3-text-grey">消息ID</label>
+				<input id="msgid" class="w3-input w3-border" required="" type="text">
+				</p>
+				<p>
+				<label class="w3-text-grey">链接</label>
+				<input id="url" class="w3-input w3-border" required="" type="text">
+				</p>
+
+			</form>
+		</div>
+	</body>
+	<script src="j/n2.js"></script>
+	<script src="j/j.js"></script>
+	<script src="j/r.js"></script>
+</html>

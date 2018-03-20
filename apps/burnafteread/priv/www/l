@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width,initial-scal=1">
+		<title>看看你：只分享给想看的人</title>
+		 <link rel="stylesheet" href="c/w.css"> 
+		 <link rel="stylesheet" href="c/m.css"> 
+		 <link rel="stylesheet" href="c/wb.css"> 
+	</head>
+	<body w3-pale-blue>
+		<div id="sharetip" class="w3-container w3-center w3-tiny">
+			<span id=share>点击右上角发送给朋友！</span>
+		</div>
+		<div class="w3-container w3-theme">
+			<p><span class="w3-xlarge">看看你</span><span class="w3-margin-left"><i>http://kkn.anet6.cc</i></span></p> 
+		</div>
+		<div class="w3-panel w3-leftbar w3-sand w3-large w3-serif">
+			<p><i><span id="joke"></span></i></p>
+		</div>  
+		<div class="w3-container w3-center">
+			<button id="cc" class="w3-btn w3-theme w3-large">看看</button>
+		</div>
+		<div class="w3-container w3-center hide" style="display:none">
+			<br>
+			<p id="read">read</p>
+		</div>
+		<div id=mbody class="w3-panel w3-large w3-pale-blue w3-leftbar w3-rightbar w3-border-blue hide" style="display:none">
+			<p><span id="message">test</span></p>
+		</div>
+		<div id="data" class="w3-bottom w3-center w3-theme hide" style="display:none">
+			<p><span id="view"></span></p>
+		</div>
+	</body>
+	<script src="j/n2.js"></script>
+	<script src="j/j.js"></script>
+	<script src="j/c.js"></script>
+	<script src="j/l.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+</html>

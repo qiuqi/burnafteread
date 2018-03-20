@@ -5,7 +5,10 @@
   {mod, { burnafteread_app, []}},
   {applications,
    [kernel,
-    stdlib
+   cowboy,
+   lager,
+   sync,
+   stdlib
    ]},
   {env,[]},
   {modules, []},

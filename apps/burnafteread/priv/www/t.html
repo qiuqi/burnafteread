@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+		 <link rel="stylesheet" href="c/w3.css"> 
+	</head>
+	<body>
+		<div class="w3-container">
+			<div class="w3-container w3-teal">
+				<h2>看看你</h2>
+			</div>
+			<form class="w3-container w3-card-4">
+				<br>
+				<p>
+				<label class="w3-text-grey">明文</label>
+				<input id="plain" class="w3-input w3-border" required="" type="text" value="">
+				</p>
+				<p>
+				<label class="w3-text-grey">密文</label>
+				<input id="cipher" class="w3-input w3-border" required="" type="text">
+				</p>
+				<p>
+				<label class="w3-text-grey">随机数</label>
+				<input id="nonce" class="w3-input w3-border" required="" type="text">
+				</p>
+				<p>
+				<label class="w3-text-grey">密钥</label>
+				<input id="secret" class="w3-input w3-border" required="" type="text">
+				</p>
+				<p>
+				<label class="w3-text-grey">链接</label>
+				<input class="w3-input w3-border" required="" type="text">
+				</p>
+			</form>
+		</div>
+	</body>
+	<script src="j/n.js"></script>
+	<script src="j/nu.js"></script>
+	<script src="j/j.js"></script>
+	<script>
+$(document).ready(function(){
+	Plain = "看看你，芬！";
+	Secret = nacl.randomBytes(nacl.secretbox.keyLength);
+	SecretB64 = nacl.util.encodeBase64(Secret);
+	Nonce = nacl.randomBytes(nacl.secretbox.nonceLength);
+	NonceB64 = nacl.util.encodeBase64(Nonce);
+	$("#nonce").val(NonceB64);
+	$("#secret").val(SecretB64);
+	PlainUtf = nacl.util.decodeUTF8(Plain);
+	Cipher = nacl.secretbox(PlainUtf, Nonce, Secret);
+	CipherB64 = nacl.util.encodeBase64(Cipher);
+	$("#cipher").val(CipherB64);
+
+	PlainAgainUtf = nacl.secretbox.open(Cipher, Nonce, Secret);
+	PlainAgain = nacl.util.encodeUTF8(PlainAgainUtf);
+	$("#plain").val(PlainAgain);
+});
+	</script>
+</html>
